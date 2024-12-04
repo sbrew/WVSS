@@ -1,0 +1,85 @@
+/* About Component Styles */
+.about {
+  padding: 40px;
+  background-color: #f4f4f4;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* First Row: Facebook icon and text */
+.about-row {
+  display: flex;
+  justify-content: center;  /* Horizontally center */
+  align-items: center;      /* Vertically center */
+  margin-bottom: 30px;      /* Space below the row */
+}
+
+.about-text {
+  text-align: center;      /* Center the text inside the div */
+  max-width: 600px; 
+  padding-right: 20px;
+}
+
+.about-facebook {
+  display: flex;
+  justify-content: center; /* Horizontally center the icon */
+  align-items: center;     /* Vertically center the icon */
+  margin-bottom: 20px;     /* Add space below the icon */
+}
+
+.facebook-icon {
+  height: 50px; 
+  fill: #4267B2; /* Facebook brand color */
+  transition: transform 0.3s ease;
+}
+
+.facebook-icon:hover {
+  transform: scale(1.1); /* Slightly scale the icon on hover */
+}
+
+.facebook-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.about-row p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Second Row: Text on left, Image on right */
+.about-row:nth-of-type(2) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-image {
+  width: 50%;  /* Decrease the size of the image container */
+  max-width: 570px; /* Set max width of image container to 550px */
+  /* background-color: #f4f4f4; Set background to match parent div */
+  /* border-radius: 8px; */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;    /* Make the image fill the container */
+  height: auto;   /* Maintain aspect ratio */
+}
+
+@media (max-width: 768px) {
+  .about-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image {
+    width: 80%;  /* Adjust image size on smaller screens */
+    margin-top: 20px;
+  }
+
+  .about-text {
+    width: 100%;
+  }
+}

@@ -1,0 +1,90 @@
+.home-banner {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 0 20px; /* Added horizontal padding */
+  font-size: 1em;
+  margin-bottom: 20px; /* Increased bottom margin for spacing */
+}
+
+.home-banner p {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  line-height: 1.5;
+  white-space: pre-line; /* Ensures line breaks are displayed */
+  margin: 0; /* Remove default margin to eliminate spacing between paragraphs */
+}
+
+.home-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 15px;
+}
+
+.home-button {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #0056b3;
+}
+
+.home-social {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.home-facebook, .home-instagram {
+  flex: 1;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.home-proud-member {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.home-proud-member p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.proud-member-image {
+  width: 250px; /* Adjust size as needed */
+  height: auto;
+}
+
+.bcsf-logo {
+  width: 250px;
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bcsf-logo {
+    width: 150px;
+  }
+}

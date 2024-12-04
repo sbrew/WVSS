@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&display=swap');
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;  /* Fallback to sans-serif if the font isn't loaded */
+  margin: 0;  /* Optional: Reset default margins */
+  padding: 0; /* Optional: Reset default padding */
+  box-sizing: border-box; /* Optional: Ensure consistent box-sizing across the site */
 }

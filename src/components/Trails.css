@@ -1,0 +1,88 @@
+.trails-content-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.left-column {
+  width: 48%;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.trails-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 15px;
+  background-color: #2d3a3d;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.download-button:hover {
+  background-color: #1f2c2d;
+}
+
+.right-column {
+  width: 48%;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.trails-content a {
+  font-weight: bold;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .trails-content-container {
+    flex-direction: column; /* Stack the columns vertically */
+    align-items: center; /* Center the columns */
+  }
+
+  .left-column {
+    width: 100%; /* Full width for the image */
+    padding-right: 0; /* Remove right padding */
+    margin-bottom: 20px; /* Add some space between the image and text */
+  }
+
+  .right-column {
+    width: 100%; /* Full width for the text */
+    padding-left: 0; /* Remove left padding */
+  }
+}

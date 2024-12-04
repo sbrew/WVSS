@@ -1,0 +1,278 @@
+/* Header Styles */
+.header {
+  display: flex;
+  padding: 0 40px;      /* Horizontal padding for spacing */
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  height: 130px;
+  z-index: 1000;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Optional: Add a subtle shadow for a nicer look */
+}
+
+.menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  display: none; /* Hidden on desktop */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;  /* Centers the logo vertically */
+  height: 100%;         /* Ensure the logo container takes full height of the header */
+}
+
+.logo {
+  height: 100%;         /* Logo will take up 100% of the container's height */
+  width: auto;          /* Preserve the aspect ratio */
+}
+
+/* Navigation Styles */
+.nav-menu {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-list {
+  list-style: none;      /* Removes bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  margin-left: 15px;     /* Space between items */
+  position: relative;
+  white-space: nowrap; 
+  border: none;  /* Prevent text from wrapping */
+  text-align: left;      /* Justify text to the left */
+}
+
+.nav-item, .nav-link {
+  text-decoration: none;  /* Prevent underlines by default */
+}
+.nav-item span {
+  display: block;
+  padding: 10px 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;           /* Dark text for better contrast on white background */
+  font-size: 1.1em;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  padding: 10px 20px;    /* Ensure links have padding */
+  white-space: nowrap;   /* Prevent wrapping */
+  display: inline-block; /* Prevents dropping or breaking the line */
+}
+
+.nav-link:hover {
+  color: #007bff;         /* Retain hover color change */
+  text-decoration: none;  /* Ensure no underline on hover */
+}
+
+.nav-link.active {
+  color: #007bff; /* Highlight the current page link */
+  font-weight: bold; /* Make the active link bold */
+  text-decoration: none;
+}
+
+/* Separator between items */
+.nav-item:not(:last-child) {
+  padding-right: 15px;
+}
+
+.nav-item:hover {
+  text-decoration: none;  /* Prevent underline on hover */
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu li::marker {
+  content: none;  /* Removes the marker (bullet point) */
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  text-align: left;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f5f5f5;
+  color: #0056b3;
+}
+
+/* Overlay for mobile menu */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.mobile-nav-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.mobile-nav-list li {
+  margin: 20px 0;
+}
+
+.mobile-nav-list .nav-link {
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+.mobile-nav-list .nav-link:hover {
+  color: #00bcd4;  /* Or the desired hover color */
+}
+
+/* Close button */
+.close-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #fff; /* White color for the X */
+  cursor: pointer;
+  z-index: 10;
+}
+
+.close-menu:hover {
+  color: #00bcd4;  /* Or the desired hover color */
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0px 20px;
+  }
+
+  .logo {
+    height: 80px;  /* Adjust height for smaller screens */
+    width: auto;   /* Maintain aspect ratio */
+  }
+
+  .menu-icon {
+    display: block;  /* Show the menu icon on mobile */
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 2000; /* Ensure it's above other elements */
+  }
+
+  .nav-menu {
+    display: none; /* Hide the nav menu by default on mobile */
+  }
+
+  .nav-menu.open {
+    display: flex;  /* Show the nav menu when the menu icon is clicked */
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    height: 100%;
+    z-index: 1000; /* Ensure the mobile menu is above other elements */
+  }
+
+  .nav-list {
+    flex-direction: column;  /* Stack items vertically in the mobile menu */
+    padding: 0;
+    margin: 0;
+    list-style: none;  /* Remove the default list styling */
+    text-align: center;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  .nav-menu {
+    display: none; /* Hide navigation links for mobile */
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: flex;  /* Show hamburger on small screens */
+  }
+
+  .nav-item span {
+    display: block;
+    padding: 10px 20px;
+  }
+}
+
+/* Close button styles */
+.close-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #333; /* Color for the X icon */
+  cursor: pointer;
+  z-index: 10;
+}
+
+.close-menu:hover {
+  color: #007bff; /* Color on hover */
+}
+
+/* Hamburger Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+}
+
+.nav-menu.open {
+  display: block;  /* Show the menu when hamburger is clicked */
+}

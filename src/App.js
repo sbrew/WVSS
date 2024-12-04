@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom' // Import Routes, not Switch
+import './App.css'
+
+import Home from './components/Home'
+import Header from './components/Header'
+import Hero from './components/Hero'
+import About from './components/About'
+import Donate from './components/Donate';
+import Volunteer from './components/Volunteer';
+import Sponsors from './components/Sponsors';
+import Contact from './components/Contact';
+import Footer from './components/Footer'
+import TrailsPage from './components/TrailsPage'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<><Hero /><Home /></>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/donate" element={<Donate />} />
+          <Route path="/volunteer" element={<Volunteer />} />
+          <Route path="/sponsors" element={<Sponsors />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/riding-areas" element={<TrailsPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
+  )
 }
 
-export default App;
+export default App

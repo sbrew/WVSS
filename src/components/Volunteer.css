@@ -1,0 +1,101 @@
+/* Volunteer Page Styles */
+.volunteer-page {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+}
+
+/* Volunteer Content */
+.volunteer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Volunteer Header */
+.volunteer-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.volunteer-header h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.volunteer-header .facebook-link {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.volunteer-header .facebook-icon {
+  width: 48px;
+  height: 48px;
+  fill: #4267B2;
+  transition: transform 0.3s ease;
+}
+
+.volunteer-header .facebook-icon:hover {
+  transform: scale(1.1); /* Slightly scale the icon on hover */
+}
+
+/* Volunteer Form Container */
+.volunteer-form-container {
+  max-width: 800px; /* Restrict max width of the form container */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.volunteer-form-container h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Mobile Responsiveness for Volunteer Form */
+@media (max-width: 768px) {
+  /* Adjust the form container width on small screens */
+  .volunteer-form-container {
+    padding: 15px;
+    max-width: 90%; /* Take up 90% of the screen width */
+    margin: 0 5%; /* Add margins on the sides */
+  }
+
+  .volunteer-form-container h3 {
+    font-size: 1.6rem; /* Slightly smaller header font size */
+    margin-bottom: 15px;
+  }
+
+  .volunteer-content {
+    padding: 15px; /* Reduced padding for better mobile fit */
+  }
+
+  .volunteer-header h3 {
+    font-size: 1.8rem; /* Reduce header font size */
+  }
+
+  .volunteer-header p {
+    font-size: 1rem; /* Smaller font size for paragraph */
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .volunteer-form-container {
+    padding: 10px;
+    max-width: 100%; /* Take up full width */
+    margin: 0 10px; /* Slight margin on very small screens */
+  }
+
+  .volunteer-form-container h3 {
+    font-size: 1.4rem; /* Further reduce font size */
+  }
+
+  .volunteer-header h3 {
+    font-size: 1.6rem; /* Adjust header font size for smaller screens */
+  }
+
+  .volunteer-header p {
+    font-size: 0.9rem; /* Smaller font for mobile */
+  }
+}
