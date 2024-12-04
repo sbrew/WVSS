@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/wvss-snowmobile/static/css/main.2951e523.css",
-    "main.js": "/wvss-snowmobile/static/js/main.b1c61d1c.js",
-    "static/js/453.f74b4b11.chunk.js": "/wvss-snowmobile/static/js/453.f74b4b11.chunk.js",
-    "static/media/fontawesome-webfont.svg?v=4.7.0": "/wvss-snowmobile/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
-    "static/media/fontawesome-webfont.eot": "/wvss-snowmobile/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
-    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/wvss-snowmobile/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
-    "static/media/fontawesome-webfont.woff?v=4.7.0": "/wvss-snowmobile/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
-    "static/media/snowmoblie-skier-stoked-768x512.jpg": "/wvss-snowmobile/static/media/snowmoblie-skier-stoked-768x512.189bee89b746395d5096.jpg",
-    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/wvss-snowmobile/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
-    "static/media/wvss-logo-colour.jpg": "/wvss-snowmobile/static/media/wvss-logo-colour.13a304d4373e8ab09815.jpg",
-    "static/media/cvflogoleftb2bb.jpg": "/wvss-snowmobile/static/media/cvflogoleftb2bb.95cef52b236b6b20a01a.jpg",
-    "static/media/BCSFLogo2.jpg": "/wvss-snowmobile/static/media/BCSFLogo2.84ac87962b74b259bcd1.jpg",
-    "static/media/cbt-logo.jpg": "/wvss-snowmobile/static/media/cbt-logo.5129e30259ed1444f04d.jpg",
-    "static/media/BCSFLogo.png": "/wvss-snowmobile/static/media/BCSFLogo.6a355cf34b4ab4561dc2.png",
-    "static/media/horsethiefcreek-textbordered-colour.png": "/wvss-snowmobile/static/media/horsethiefcreek-textbordered-colour.5826123691976a8b129d.png",
-    "static/media/snowmoblie-skier-stoked-300x200.jpg": "/wvss-snowmobile/static/media/snowmoblie-skier-stoked-300x200.f260a705a877463fac6a.jpg",
-    "index.html": "/wvss-snowmobile/index.html",
-    "main.2951e523.css.map": "/wvss-snowmobile/static/css/main.2951e523.css.map",
-    "main.b1c61d1c.js.map": "/wvss-snowmobile/static/js/main.b1c61d1c.js.map",
-    "453.f74b4b11.chunk.js.map": "/wvss-snowmobile/static/js/453.f74b4b11.chunk.js.map"
+    "main.css": "/WVSS/static/css/main.1e57e936.css",
+    "main.js": "/WVSS/static/js/main.813ccdec.js",
+    "static/js/453.f74b4b11.chunk.js": "/WVSS/static/js/453.f74b4b11.chunk.js",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/WVSS/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/fontawesome-webfont.eot": "/WVSS/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/WVSS/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/WVSS/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/snowmoblie-skier-stoked-768x512.jpg": "/WVSS/static/media/snowmoblie-skier-stoked-768x512.189bee89b746395d5096.jpg",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/WVSS/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/wvss-logo-colour.jpg": "/WVSS/static/media/wvss-logo-colour.13a304d4373e8ab09815.jpg",
+    "static/media/cvflogoleftb2bb.jpg": "/WVSS/static/media/cvflogoleftb2bb.95cef52b236b6b20a01a.jpg",
+    "static/media/BCSFLogo2.jpg": "/WVSS/static/media/BCSFLogo2.84ac87962b74b259bcd1.jpg",
+    "static/media/cbt-logo.jpg": "/WVSS/static/media/cbt-logo.5129e30259ed1444f04d.jpg",
+    "static/media/BCSFLogo.png": "/WVSS/static/media/BCSFLogo.6a355cf34b4ab4561dc2.png",
+    "static/media/horsethiefcreek-textbordered-colour.png": "/WVSS/static/media/horsethiefcreek-textbordered-colour.5826123691976a8b129d.png",
+    "static/media/snowmoblie-skier-stoked-300x200.jpg": "/WVSS/static/media/snowmoblie-skier-stoked-300x200.f260a705a877463fac6a.jpg",
+    "index.html": "/WVSS/index.html",
+    "main.1e57e936.css.map": "/WVSS/static/css/main.1e57e936.css.map",
+    "main.813ccdec.js.map": "/WVSS/static/js/main.813ccdec.js.map",
+    "453.f74b4b11.chunk.js.map": "/WVSS/static/js/453.f74b4b11.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2951e523.css",
-    "static/js/main.b1c61d1c.js"
+    "static/css/main.1e57e936.css",
+    "static/js/main.813ccdec.js"
   ]
 }
