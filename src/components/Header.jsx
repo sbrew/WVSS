@@ -37,7 +37,7 @@ function Header() {
     return (
       <ul className="nav-list">
         <li className="nav-item">
-          <NavLink to="/" className="nav-link" activeClassName="active">Home</NavLink>
+          <NavLink to="/WVSS" className="nav-link" activeClassName="active">Home</NavLink>
         </li>
         <li className="nav-item">
           <a 

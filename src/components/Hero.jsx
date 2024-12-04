@@ -8,7 +8,7 @@ const Hero = () => {
         <div className="hero-content">
           <div className="hero-text">
             <h1>Windermere Valley<br />Snowmobile Society</h1>
-            <p>BC’s best kept Secret</p>
+            <p>BC’s Best Kept Secret</p>
           </div>
         </div>
       </div>
