@@ -36,31 +36,31 @@ function Home() {
 
   const { bannerText, catamountText } = getBannerAndCatamountText();
 
-  useEffect(() => {
-    const fetchFacebookPost = async () => {
-      const pageId = 'WindermereValleySnowmobiling';  // Facebook page name or ID
-      const accessToken = 'EAAS1HqzxeZCgBOZCEERNJUgJDeftHlWberrWK22KLZA6jArmlrJFaJ0wWvnuK0mvm10tCo9h05nLrhh97PGoNZCAdiw8wGB8uTMi2OoicP763Fqcx2ZBPWiLmlXAnZC5xZANMkgzDJZAkpDzC8MVDavb99E4RTdIXBOL6OFCy1dGghlifHU7CL9uoBaA1SZAlVHkcT8TTRyEZAFZAiIP5iCAx71yZCryyNl49FGhy2zOFdwPdC9AJBCBJZAZCoYHK8aYkZD'; // Use your Facebook Page Access Token
+  // useEffect(() => {
+  //   const fetchFacebookPost = async () => {
+  //     const pageId = 'WindermereValleySnowmobiling';  // Facebook page name or ID
+  //     const accessToken = 'EAAS1HqzxeZCgBOZCEERNJUgJDeftHlWberrWK22KLZA6jArmlrJFaJ0wWvnuK0mvm10tCo9h05nLrhh97PGoNZCAdiw8wGB8uTMi2OoicP763Fqcx2ZBPWiLmlXAnZC5xZANMkgzDJZAkpDzC8MVDavb99E4RTdIXBOL6OFCy1dGghlifHU7CL9uoBaA1SZAlVHkcT8TTRyEZAFZAiIP5iCAx71yZCryyNl49FGhy2zOFdwPdC9AJBCBJZAZCoYHK8aYkZD'; // Use your Facebook Page Access Token
 
-      try {
-        // Fetch the latest post from the Facebook Page
-        const response = await fetch(
-          `https://graph.facebook.com/${pageId}/posts?access_token=${accessToken}`
-        );
-        const data = await response.json();
+  //     try {
+  //       // Fetch the latest post from the Facebook Page
+  //       const response = await fetch(
+  //         `https://graph.facebook.com/${pageId}/posts?access_token=${accessToken}`
+  //       );
+  //       const data = await response.json();
         
-        if (data.data && data.data.length > 0) {
-          const latestPost = data.data[0]; // Get the most recent post
-          setFacebookPost(latestPost);
-        } else {
-          console.error('No posts found');
-        }
-      } catch (error) {
-        console.error('Error fetching Facebook posts:', error);
-      }
-    };
+  //       if (data.data && data.data.length > 0) {
+  //         const latestPost = data.data[0]; // Get the most recent post
+  //         setFacebookPost(latestPost);
+  //       } else {
+  //         console.error('No posts found');
+  //       }
+  //     } catch (error) {
+  //       console.error('Error fetching Facebook posts:', error);
+  //     }
+  //   };
 
-    fetchFacebookPost();
-  }, []);
+  //   fetchFacebookPost();
+  // }, []);
 
   return (
     <section>
@@ -91,7 +91,7 @@ function Home() {
         </a>
       </div>
 
-      <div className="home-social">
+      {/* <div className="home-social">
       <div className="home-facebook">
           {facebookPost ? (
             <div className="facebook-post">
@@ -107,11 +107,11 @@ function Home() {
             <p>Loading latest Facebook post...</p>
           )}
         </div>
-        <div className="home-instagram">
+        <div className="home-instagram"> */}
           {/* Placeholder for Instagram gallery */}
-          <p>Instagram Gallery Placeholder</p>
+          {/* <p>Instagram Gallery Placeholder</p>
         </div>
-      </div>
+      </div> */}
 
       <div className="home-proud-member" style={{ paddingBottom: '10px' }}>
         <p>Proud Member</p>

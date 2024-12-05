@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom'; // Use NavLink for active styling
 import './Header.css';
 
@@ -14,15 +14,30 @@ const getMembershipYears = () => {
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [conditionsDropdownOpen, setConditionsDropdownOpen] = useState(false);
-  const [clubDropdownOpen, setClubDropdownOpen] = useState(false);
+  const [openDropdownIndex, setOpenDropdownIndex] = useState(null);  // Track which dropdown is open
+  const [isMobile, setIsMobile] = useState(false);
 
-  const toggleConditionsDropdown = () => {
-    setConditionsDropdownOpen(!conditionsDropdownOpen);
+  // Check screen size on load and resize
+  const handleResize = () => {
+    if (window.innerWidth <= 768) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
   };
 
-  const toggleClubDropdown = () => {
-    setClubDropdownOpen(!clubDropdownOpen);
+  useEffect(() => {
+    handleResize(); // Check size initially
+    window.addEventListener('resize', handleResize); // Update on resize
+
+    // Clean up event listener
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const toggleDropdown = (index) => {
+    setOpenDropdownIndex(index === openDropdownIndex ? null : index);  // Toggle dropdown open/close
   };
 
   const toggleMenu = () => {
@@ -33,11 +48,26 @@ function Header() {
     setIsMenuOpen(false);
   };
 
+  // Scroll to the top of the page when a link is clicked
+  const handleLinkClick = () => {
+    if (isMobile) {
+      window.scrollTo(0, 0);  // Scroll to top
+      setIsMenuOpen(false);   // Close the menu after clicking the link
+    }
+  };
+
   const menuList = () => {
     return (
       <ul className="nav-list">
         <li className="nav-item">
-          <NavLink to="/WVSS" className="nav-link" activeClassName="active">Home</NavLink>
+          <NavLink 
+            to="/WVSS/" 
+            className="nav-link" 
+            activeClassName="active" 
+            onClick={handleLinkClick}  // Scroll to top when clicked
+          >
+            Home
+          </NavLink>
         </li>
         <li className="nav-item">
           <a 
@@ -45,6 +75,7 @@ function Header() {
             target="_blank" 
             rel="noopener noreferrer" 
             className="nav-link"
+            onClick={handleLinkClick}  // Scroll to top when clicked
           >
             {`${getMembershipYears()} Membership`}
           </a>
@@ -55,44 +86,62 @@ function Header() {
             target="_blank" 
             rel="noopener noreferrer" 
             className="nav-link"
+            onClick={handleLinkClick}  // Scroll to top when clicked
           >
             Trail Passes
           </a>
         </li>
-        <li className="nav-item" onMouseEnter={toggleClubDropdown} onMouseLeave={toggleClubDropdown}>
+        <li 
+          className={`nav-item ${isMobile && openDropdownIndex === 0 ? 'club-open' : ''}`} 
+          onMouseEnter={() => toggleDropdown(0)} 
+          onMouseLeave={() => toggleDropdown(0)}
+        >
           <span className="nav-link">Club</span>
-          {clubDropdownOpen && (
+          {openDropdownIndex === 0 && (
             <ul className="dropdown-menu">
               <li>
-                <NavLink to="/about">About</NavLink>
+                <NavLink to="/about" onClick={handleLinkClick}>About</NavLink>
               </li>
               <li>
-                <NavLink to="/donate">Donate</NavLink>
+                <NavLink to="/donate" onClick={handleLinkClick}>Donate</NavLink>
               </li>
               <li>
-                <NavLink to="/volunteer">Volunteer</NavLink>
+                <NavLink to="/volunteer" onClick={handleLinkClick}>Volunteer</NavLink>
               </li>
               <li>
-                <NavLink to="/sponsors">Sponsors</NavLink>
+                <NavLink to="/sponsors" onClick={handleLinkClick}>Sponsors</NavLink>
               </li>
               <li>
-                <NavLink to="/contact">Contact Us</NavLink>
+                <NavLink to="/contact" onClick={handleLinkClick}>Contact Us</NavLink>
               </li>
             </ul>
           )}
         </li>
-        <li className="nav-item" onMouseEnter={toggleConditionsDropdown} onMouseLeave={toggleConditionsDropdown}>
+        <li 
+          className={`nav-item ${isMobile && openDropdownIndex === 1 ? 'conditions-open' : ''}`} 
+          onMouseEnter={() => toggleDropdown(1)} 
+          onMouseLeave={() => toggleDropdown(1)}
+        >
           <span className="nav-link">Conditions</span>
-          {conditionsDropdownOpen && (
+          {openDropdownIndex === 1 && (
             <ul className="dropdown-menu">
-              <li><a href="https://www.mountain-forecast.com/peaks/Pigeon-Spire/forecasts/2500" target="_blank" rel="noopener noreferrer">Pigeon Spire Forecast</a></li>
-              <li><a href="https://www.mountain-forecast.com/peaks/Mount-Farnham/forecasts/2500" target="_blank" rel="noopener noreferrer">Mount Farnham Forecast</a></li>
-              <li><a href="https://avalanche.ca/map" target="_blank" rel="noopener noreferrer">Avalanche Conditions</a></li>
+              <li><a href="https://www.mountain-forecast.com/peaks/Pigeon-Spire/forecasts/2500" target="_blank" rel="noopener noreferrer" onClick={handleLinkClick}>Pigeon Spire Forecast</a></li>
+              <li><a href="https://www.mountain-forecast.com/peaks/Mount-Farnham/forecasts/2500" target="_blank" rel="noopener noreferrer" onClick={handleLinkClick}>Mount Farnham Forecast</a></li>
+              <li><a href="https://avalanche.ca/map" target="_blank" rel="noopener noreferrer" onClick={handleLinkClick}>Avalanche Conditions</a></li>
             </ul>
           )}
         </li>
-        <li className="nav-item">
-          <NavLink to="/riding-areas" className="nav-link" activeClassName="active">Riding Areas</NavLink>
+        <li 
+          className={`nav-item ${isMobile && openDropdownIndex === 2 ? 'riding-areas-open' : ''}`} 
+        >
+          <NavLink 
+            to="/riding-areas" 
+            className="nav-link" 
+            activeClassName="active" 
+            onClick={handleLinkClick}  // Scroll to top when clicked
+          >
+            Riding Areas
+          </NavLink>
         </li>
       </ul>
     );

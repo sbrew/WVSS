@@ -276,3 +276,12 @@
 .nav-menu.open {
   display: block;  /* Show the menu when hamburger is clicked */
 }
+
+@media (max-width: 768px) {
+  .club-open {
+    margin-bottom: 220px;
+  }
+  .conditions-open {
+    margin-bottom: 135px;
+  }
+}

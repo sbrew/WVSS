@@ -1,10 +1,18 @@
-import React from 'react'
-import './Hero.css'
+import React from 'react';
+import './Hero.css';
+import desktopImage from '../assets/catamount-desktop.jpg';
+import mobileImage from '../assets/catamount-mobile.jpg';
 
 const Hero = () => {
   return (
     <div className="hero-container">
-      <div className="hero-background">
+      {/* Conditionally set background images based on screen size */}
+      <div 
+        className="hero-background"
+        style={{
+          backgroundImage: `url(${window.innerWidth > 768 ? desktopImage : mobileImage})`
+        }}
+      >
         <div className="hero-content">
           <div className="hero-text">
             <h1>Windermere Valley<br />Snowmobile Society</h1>
@@ -25,7 +33,7 @@ const Hero = () => {
         </svg>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
