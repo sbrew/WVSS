@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/WVSS/static/css/main.a4f0bbc6.css",
-    "main.js": "/WVSS/static/js/main.765d63bd.js",
+    "main.js": "/WVSS/static/js/main.a27a8958.js",
     "static/js/453.f74b4b11.chunk.js": "/WVSS/static/js/453.f74b4b11.chunk.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/WVSS/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/rafflepic2425.webp": "/WVSS/static/media/rafflepic2425.618f8c2e51660db879bf.webp",
@@ -22,11 +22,11 @@
     "static/media/snowmoblie-skier-stoked-300x200.jpg": "/WVSS/static/media/snowmoblie-skier-stoked-300x200.f260a705a877463fac6a.jpg",
     "index.html": "/WVSS/index.html",
     "main.a4f0bbc6.css.map": "/WVSS/static/css/main.a4f0bbc6.css.map",
-    "main.765d63bd.js.map": "/WVSS/static/js/main.765d63bd.js.map",
+    "main.a27a8958.js.map": "/WVSS/static/js/main.a27a8958.js.map",
     "453.f74b4b11.chunk.js.map": "/WVSS/static/js/453.f74b4b11.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a4f0bbc6.css",
-    "static/js/main.765d63bd.js"
+    "static/js/main.a27a8958.js"
   ]
 }
