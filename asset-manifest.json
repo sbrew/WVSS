@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/WVSS/static/css/main.a4f0bbc6.css",
+    "main.css": "/WVSS/static/css/main.1a428bd9.css",
     "main.js": "/WVSS/static/js/main.d9c78005.js",
     "static/js/239.fb2f27ea.chunk.js": "/WVSS/static/js/239.fb2f27ea.chunk.js",
     "static/js/213.efaabdea.chunk.js": "/WVSS/static/js/213.efaabdea.chunk.js",
@@ -25,7 +25,7 @@
     "static/media/horsethiefcreek-textbordered-colour.png": "/WVSS/static/media/horsethiefcreek-textbordered-colour.5826123691976a8b129d.png",
     "static/media/snowmoblie-skier-stoked-300x200.jpg": "/WVSS/static/media/snowmoblie-skier-stoked-300x200.f260a705a877463fac6a.jpg",
     "index.html": "/WVSS/index.html",
-    "main.a4f0bbc6.css.map": "/WVSS/static/css/main.a4f0bbc6.css.map",
+    "main.1a428bd9.css.map": "/WVSS/static/css/main.1a428bd9.css.map",
     "main.d9c78005.js.map": "/WVSS/static/js/main.d9c78005.js.map",
     "239.fb2f27ea.chunk.js.map": "/WVSS/static/js/239.fb2f27ea.chunk.js.map",
     "213.efaabdea.chunk.js.map": "/WVSS/static/js/213.efaabdea.chunk.js.map",
@@ -33,7 +33,7 @@
     "453.7bf6ce96.chunk.js.map": "/WVSS/static/js/453.7bf6ce96.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a4f0bbc6.css",
+    "static/css/main.1a428bd9.css",
     "static/js/main.d9c78005.js"
   ]
 }
