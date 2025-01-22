@@ -1,18 +1,33 @@
-import React from 'react'
-import PageHeader from './PageHeader'
-import './Trails.css'
+import React from 'react';
+import { jsPDF } from 'jspdf'; // Import jsPDF
+import PageHeader from './PageHeader';
+import './Trails.css';
+import trailMap from '../assets/koocanussa-trail-map-1-854x1024-1.jpg';
 
 const TrailsContent = () => {
+  const downloadPDF = () => {
+    const doc = new jsPDF('portrait', 'px', 'a4'); // Create a new jsPDF document
+    const imgWidth = 400; // Width of the image in the PDF
+    const imgHeight = 400; // Adjust height to maintain aspect ratio
+
+    doc.text('Trail Map', 20, 20); // Add some title text (optional)
+
+    doc.addImage(trailMap, 'JPEG', 20, 40, imgWidth, imgHeight); // Add the image
+    doc.save('Trail-Map.pdf'); // Save the PDF file with the name 'Trail-Map.pdf'
+  };
+
   return (
     <div className="trails-content-container">
       {/* Left Column with Image and Button */}
       <div className="left-column">
         <img
-          src="https://wvss.ca/wp-content/uploads/2020/12/koocanussa-trail-map-1-854x1024-1.jpg"
+          src={trailMap}
           alt="Snowmobiling area"
           className="trails-image"
         />
-        <button className="download-button">Download PDF</button>
+        <button className="download-button" onClick={downloadPDF}>
+          Download PDF
+        </button>
       </div>
 
       {/* Right Column with Text Content */}
@@ -56,22 +71,7 @@ const TrailsContent = () => {
         </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-
-const TrailsPage = () => {
-  return (
-    <div>
-      <PageHeader
-        title="TRAILS"
-        subtitle="Trail Information provided by SnoRiders West, Discover more about sledding in our area."
-      />
-      <div className="trails-content">
-        {TrailsContent()}
-      </div>
-    </div>
-  )
-}
-
-export default TrailsPage
+export default TrailsContent;
