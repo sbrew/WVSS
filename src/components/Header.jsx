@@ -60,6 +60,7 @@ function Header() {
     if (isMobile) {
       window.scrollTo(0, 0);  // Scroll to top
       setIsMenuOpen(false);   // Close the menu after clicking the link
+      setOpenDropdownIndex(null)
     }
   };
 
