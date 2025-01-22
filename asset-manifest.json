@@ -1,11 +1,15 @@
 {
   "files": {
     "main.css": "/WVSS/static/css/main.a4f0bbc6.css",
-    "main.js": "/WVSS/static/js/main.a27a8958.js",
-    "static/js/453.f74b4b11.chunk.js": "/WVSS/static/js/453.f74b4b11.chunk.js",
+    "main.js": "/WVSS/static/js/main.788b23fd.js",
+    "static/js/239.fb2f27ea.chunk.js": "/WVSS/static/js/239.fb2f27ea.chunk.js",
+    "static/js/213.efaabdea.chunk.js": "/WVSS/static/js/213.efaabdea.chunk.js",
+    "static/js/732.6a0001f9.chunk.js": "/WVSS/static/js/732.6a0001f9.chunk.js",
+    "static/js/453.7bf6ce96.chunk.js": "/WVSS/static/js/453.7bf6ce96.chunk.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/WVSS/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/rafflepic2425.webp": "/WVSS/static/media/rafflepic2425.618f8c2e51660db879bf.webp",
     "static/media/catamount-desktop.jpg": "/WVSS/static/media/catamount-desktop.98c6895317bd326ac115.jpg",
+    "static/media/koocanussa-trail-map-1-854x1024-1.jpg": "/WVSS/static/media/koocanussa-trail-map-1-854x1024-1.6dcb081ae1eba9939af7.jpg",
     "static/media/fontawesome-webfont.eot": "/WVSS/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/WVSS/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
     "static/media/footer-cap-2.jpg": "/WVSS/static/media/footer-cap-2.c5cb2d8fda65c2f5cd00.jpg",
@@ -22,11 +26,14 @@
     "static/media/snowmoblie-skier-stoked-300x200.jpg": "/WVSS/static/media/snowmoblie-skier-stoked-300x200.f260a705a877463fac6a.jpg",
     "index.html": "/WVSS/index.html",
     "main.a4f0bbc6.css.map": "/WVSS/static/css/main.a4f0bbc6.css.map",
-    "main.a27a8958.js.map": "/WVSS/static/js/main.a27a8958.js.map",
-    "453.f74b4b11.chunk.js.map": "/WVSS/static/js/453.f74b4b11.chunk.js.map"
+    "main.788b23fd.js.map": "/WVSS/static/js/main.788b23fd.js.map",
+    "239.fb2f27ea.chunk.js.map": "/WVSS/static/js/239.fb2f27ea.chunk.js.map",
+    "213.efaabdea.chunk.js.map": "/WVSS/static/js/213.efaabdea.chunk.js.map",
+    "732.6a0001f9.chunk.js.map": "/WVSS/static/js/732.6a0001f9.chunk.js.map",
+    "453.7bf6ce96.chunk.js.map": "/WVSS/static/js/453.7bf6ce96.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a4f0bbc6.css",
-    "static/js/main.a27a8958.js"
+    "static/js/main.788b23fd.js"
   ]
 }
