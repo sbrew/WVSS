@@ -36,8 +36,14 @@ function Header() {
     };
   }, []);
 
+  // Toggle dropdown for mobile and desktop
   const toggleDropdown = (index) => {
-    setOpenDropdownIndex(index === openDropdownIndex ? null : index);  // Toggle dropdown open/close
+    if (isMobile) {
+      setOpenDropdownIndex(index === openDropdownIndex ? null : index);  // Toggle on click for mobile
+    } else {
+      // Keep hover functionality for larger screens
+      setOpenDropdownIndex(index === openDropdownIndex ? null : index);
+    }
   };
 
   const toggleMenu = () => {
@@ -55,7 +61,8 @@ function Header() {
       setIsMenuOpen(false);   // Close the menu after clicking the link
     }
   };
-
+console.log('ismobile', isMobile)
+console.log('openDropdownIndex', openDropdownIndex)
   const menuList = () => {
     return (
       <ul className="nav-list">
@@ -93,8 +100,7 @@ function Header() {
         </li>
         <li 
           className={`nav-item ${isMobile && openDropdownIndex === 0 ? 'club-open' : ''}`} 
-          onMouseEnter={() => toggleDropdown(0)} 
-          onMouseLeave={() => toggleDropdown(0)}
+          onClick={() => toggleDropdown(0)} // Use click for mobile dropdown
         >
           <span className="nav-link">Club</span>
           {openDropdownIndex === 0 && (
@@ -102,9 +108,6 @@ function Header() {
               <li>
                 <NavLink to="/about" onClick={handleLinkClick}>About</NavLink>
               </li>
-              {/* <li>
-                <NavLink to="/donate" onClick={handleLinkClick}>Donate</NavLink>
-              </li> */}
               <li>
                 <NavLink to="/volunteer" onClick={handleLinkClick}>Volunteer</NavLink>
               </li>
@@ -119,8 +122,7 @@ function Header() {
         </li>
         <li 
           className={`nav-item ${isMobile && openDropdownIndex === 1 ? 'conditions-open' : ''}`} 
-          onMouseEnter={() => toggleDropdown(1)} 
-          onMouseLeave={() => toggleDropdown(1)}
+          onClick={() => toggleDropdown(1)} // Use click for mobile dropdown
         >
           <span className="nav-link">Conditions</span>
           {openDropdownIndex === 1 && (
@@ -154,7 +156,7 @@ function Header() {
       </div>
       <nav className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
         {isMenuOpen && (
-          <button className="close-menu" onClick={closeMenu} aria-label="Close menu">×</button>
+          <button className="close-menu" onClick={closeMenu} aria-label="Close menu">×</button> // X icon to close the menu
         )}
         {menuList()}
       </nav>

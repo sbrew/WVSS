@@ -41,19 +41,21 @@
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: row;   /* Items align in a row on desktop */
 }
 
 .nav-item {
   margin-left: 15px;     /* Space between items */
   position: relative;
-  white-space: nowrap; 
+  white-space: nowrap;
   border: none;  /* Prevent text from wrapping */
-  text-align: left;      /* Justify text to the left */
+  text-align: left;
 }
 
 .nav-item, .nav-link {
   text-decoration: none;  /* Prevent underlines by default */
 }
+
 .nav-item span {
   display: block;
   padding: 10px 20px;
@@ -93,10 +95,10 @@
 /* Dropdown Styles */
 .dropdown-menu {
   display: none;
-  position: absolute;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 10px;
+  position: absolute; /* Position it below the item */
 }
 
 .nav-item:hover .dropdown-menu {
@@ -108,7 +110,7 @@
 }
 
 .dropdown-menu li::marker {
-  content: none;  /* Removes the marker (bullet point) */
+  content: none; /* Removes the marker (bullet point) */
 }
 
 .dropdown-menu li a {
@@ -166,7 +168,7 @@
   background: none;
   border: none;
   font-size: 30px;
-  color: #fff; /* White color for the X */
+  color: #333; /* White color for the X */
   cursor: pointer;
   z-index: 10;
 }
@@ -198,7 +200,8 @@
   }
 
   .nav-menu.open {
-    display: flex;  /* Show the nav menu when the menu icon is clicked */
+    display: flex;
+    justify-content: flex-start;
     flex-direction: column;
     align-items: center;
     position: fixed;
@@ -216,90 +219,24 @@
     margin: 0;
     list-style: none;  /* Remove the default list styling */
     text-align: center;
+    overflow-y: visible; /* Ensure the list can scroll */
   }
 
   .nav-item {
     margin: 10px 0;
   }
 
-  .nav-menu {
-    display: none; /* Hide navigation links for mobile */
+  .nav-item.club-open {
+    margin-bottom: 180px; /* Adjust space when the club dropdown is open */
   }
 
-  .nav-item {
-    margin: 10px 0;
-  }
-
-  .hamburger {
-    display: flex;  /* Show hamburger on small screens */
-  }
-
-  .nav-item span {
-    display: block;
-    padding: 10px 20px;
-  }
-
-  /* Mobile specific styles for dropdown menu items */
-  .club-open {
-    margin-bottom: 220px; /* Adjust space when the club dropdown is open */
-  }
-
-  .conditions-open {
+  .nav-item.conditions-open {
     margin-bottom: 135px; /* Adjust space when the conditions dropdown is open */
   }
-}
 
-/* Close button styles */
-.close-menu {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: none;
-  border: none;
-  font-size: 30px;
-  color: #333; /* Color for the X icon */
-  cursor: pointer;
-  z-index: 10;
-}
-
-.close-menu:hover {
-  color: #007bff; /* Color on hover */
-}
-
-/* Hamburger Styles */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 30px;
-  height: 25px;
-  cursor: pointer;
-}
-
-.bar {
-  width: 30px;
-  height: 4px;
-  background-color: white;
-}
-
-.nav-menu.open {
-  display: block;  /* Show the menu when hamburger is clicked */
-}
-
-@media (max-width: 1220px) {
-  .nav-menu.open {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-list {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .nav-item {
-    margin: 10px 0;
-    width: 100%;
+  /* For better spacing and layout */
+  .dropdown-menu {
+    margin-top: 5px; /* Reduced top margin */
+    padding-top: 5px; /* Added padding to avoid too much space inside the menu */
   }
 }
