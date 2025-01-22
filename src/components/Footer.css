@@ -1,27 +1,66 @@
 /* Footer Section */
 .footer {
-  background-color: #333;
-  color: white;
-  padding: 20px;
+  background-color: #fff; /* Background color */
+  color: #333; /* Text color */
   text-align: center;
+  position: relative; /* Ensures the background image is positioned correctly */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .footer .footer-content {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 20px;
+  z-index: 2; /* Content should be above background */
 }
 
 .footer .social-links {
   margin-top: 10px;
+  display: flex;
+  justify-content: center; /* Center icons */
 }
 
 .footer .social-links a {
-  color: white;
-  margin: 0 10px;
-  font-size: 1.5em;
+  margin: 0 15px;
+  font-size: 2em; /* Size of icons */
   transition: color 0.3s ease;
 }
 
 .footer .social-links a:hover {
-  color: #007bff;
+  opacity: 0.8; /* Slight hover effect */
+}
+
+/* Facebook and Instagram Icon Colors */
+.facebook-icon {
+  color: #3b5998; /* Facebook Blue */
+}
+
+.instagram-icon {
+  color: #e1306c; /* Instagram Pinkish Purple */
+}
+
+.footer .footer-text {
+  margin-top: 20px;
+  color: #333;
+  text-align: center;
+  font-size: 0.9rem;
+  padding-bottom: 10px;
+  z-index: 2;
+  margin-top: auto; /* Ensure text is at the bottom */
+}
+
+/* Footer Background Image Styles */
+.footer-background {
+  background-image: url('../assets/footer-cap-2.jpg');
+  background-size: cover;
+}
+
+/* Ensure the background behaves like in the hero component */
+@media (max-width: 768px) {
+  .footer-background {
+    background-size: cover;
+    background-position: center;
+  }
 }

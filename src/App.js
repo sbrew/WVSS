@@ -6,7 +6,7 @@ import Home from './components/Home'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
-import Donate from './components/Donate';
+// import Donate from './components/Donate';
 import Volunteer from './components/Volunteer';
 import Sponsors from './components/Sponsors';
 import Contact from './components/Contact';
@@ -21,7 +21,7 @@ function App() {
         <Routes>
           <Route path="/WVSS/" element={<><Hero /><Home /></>} />
           <Route path="/about" element={<About />} />
-          <Route path="/donate" element={<Donate />} />
+          {/* <Route path="/donate" element={<Donate />} /> */}
           <Route path="/volunteer" element={<Volunteer />} />
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/contact" element={<Contact />} />

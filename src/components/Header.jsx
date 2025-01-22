@@ -19,7 +19,7 @@ function Header() {
 
   // Check screen size on load and resize
   const handleResize = () => {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1220) {
       setIsMobile(true);
     } else {
       setIsMobile(false);
@@ -102,9 +102,9 @@ function Header() {
               <li>
                 <NavLink to="/about" onClick={handleLinkClick}>About</NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink to="/donate" onClick={handleLinkClick}>Donate</NavLink>
-              </li>
+              </li> */}
               <li>
                 <NavLink to="/volunteer" onClick={handleLinkClick}>Volunteer</NavLink>
               </li>

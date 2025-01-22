@@ -175,13 +175,14 @@
   color: #00bcd4;  /* Or the desired hover color */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1220px) {
   .header {
     padding: 0px 20px;
+    height: 90px;
   }
 
   .logo {
-    height: 80px;  /* Adjust height for smaller screens */
+    height: 90px;  /* Adjust height for smaller screens */
     width: auto;   /* Maintain aspect ratio */
   }
 
@@ -237,6 +238,15 @@
     display: block;
     padding: 10px 20px;
   }
+
+  /* Mobile specific styles for dropdown menu items */
+  .club-open {
+    margin-bottom: 220px; /* Adjust space when the club dropdown is open */
+  }
+
+  .conditions-open {
+    margin-bottom: 135px; /* Adjust space when the conditions dropdown is open */
+  }
 }
 
 /* Close button styles */
@@ -277,11 +287,19 @@
   display: block;  /* Show the menu when hamburger is clicked */
 }
 
-@media (max-width: 768px) {
-  .club-open {
-    margin-bottom: 220px;
+@media (max-width: 1220px) {
+  .nav-menu.open {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  .conditions-open {
-    margin-bottom: 135px;
+
+  .nav-list {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+    width: 100%;
   }
 }
