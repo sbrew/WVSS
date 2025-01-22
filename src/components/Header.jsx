@@ -130,7 +130,7 @@ function Header() {
             <ul className="dropdown-menu">
               <li><a href="https://www.mountain-forecast.com/peaks/Pigeon-Spire/forecasts/2500" target="_blank" rel="noopener noreferrer" onClick={handleLinkClick}>Pigeon Spire Forecast</a></li>
               <li><a href="https://www.mountain-forecast.com/peaks/Mount-Farnham/forecasts/2500" target="_blank" rel="noopener noreferrer" onClick={handleLinkClick}>Mount Farnham Forecast</a></li>
-              <li><a href="https://avalanche.ca/map" target="_blank" rel="noopener noreferrer" onClick={handleLinkClick}>Avalanche Conditions</a></li>
+              <li><a href="https://avalanche.ca/map?lat=50.659957&lng=-116.560299" target="_blank" rel="noopener noreferrer" onClick={handleLinkClick}>Avalanche Conditions</a></li>
             </ul>
           )}
         </li>
