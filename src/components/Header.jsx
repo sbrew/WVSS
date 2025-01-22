@@ -52,6 +52,7 @@ function Header() {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+    setOpenDropdownIndex(null)
   };
 
   // Scroll to the top of the page when a link is clicked
@@ -61,8 +62,7 @@ function Header() {
       setIsMenuOpen(false);   // Close the menu after clicking the link
     }
   };
-console.log('ismobile', isMobile)
-console.log('openDropdownIndex', openDropdownIndex)
+
   const menuList = () => {
     return (
       <ul className="nav-list">
