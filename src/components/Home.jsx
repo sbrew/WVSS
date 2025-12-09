@@ -122,7 +122,7 @@ function Home() {
 
 
       {/* Updated Raffle Section */}
-      <div className="home-Raffle-section">
+      {/* <div className="home-Raffle-section">
         <h2 className="section-header">2024/2025 W.V.S.S. Poker Run Prize Raffle</h2>
         <div className="two-column">
           <div className="column-left">
@@ -158,11 +158,9 @@ function Home() {
             Enter Here!
           </a>
         </div>
-      </div>
+      </div> */}
 
       <section>
-      {/* Other sections... */}
-
       {/* Sponsors Section with Images in a Row */}
       <div className="sponsors-banner">
         <h2 className="section-header">Our Sponsors</h2>
