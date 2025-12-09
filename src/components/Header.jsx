@@ -79,7 +79,7 @@ function Header() {
         </li>
         <li className="nav-item">
           <a 
-            href="https://app.amilia.com/store/en/windermere-valley-snowmobile-club/shop/programs/91912?subCategoryIds=5317994" 
+            href="https://app.amilia.com/store/en/windermere-valley-snowmobile-club/shop/programs/91912" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="nav-link"
