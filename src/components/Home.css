@@ -190,6 +190,17 @@
   gap: 20px; /* Add space between images */
 }
 
+.sponsors-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.sponsors-image {
+  width: auto; /* Keep the aspect ratio intact */
+  object-fit: contain; /* Ensure images fit well */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+
 /* Individual sponsor image styles */
 .sponsor-image img {
   height: 100px; /* Set the height for images */

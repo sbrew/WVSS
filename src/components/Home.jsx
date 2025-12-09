@@ -5,10 +5,13 @@ import bcsfLogo from '../assets/BCSFLogo.png';
 import bcsfLogo2 from '../assets/BCSFLogo2.jpg';
 import rafflepic2425 from '../assets/rafflepic2425.webp';
 import sponsor1 from '../assets/kanataMod.jpg';
-import sponsor2 from '../assets/horsethiefcreek-textbordered-colour.png';
+// import sponsor2 from '../assets/horsethiefcreek-textbordered-colour.png';
 import sponsor3 from '../assets/cvflogoleftb2bb.jpg';
 import sponsor4 from '../assets/CVPowerSports.png';
 import sponsor5 from '../assets/cbt-logo.jpg';
+import sponsor6 from '../assets/groupedSponsors.jpg';
+// import { ReactComponent as Sponsors2025 } from '../assets/2025Sponsors.svg';
+
 
 function Home() {
   const today = new Date();
@@ -16,23 +19,28 @@ function Home() {
   const day = today.getDate();
   const [facebookPost, setFacebookPost] = useState(null);
 
-  const getBannerAndCatamountText = () => {
-    const bannerText = (() => {
-      if ((month === 6 && day >= 1) || (month === 11 && day <= 30) || (month > 6 && month < 11)) {
-        return (
-          "Please be aware that the Forster area is closed to motorized vehicles from June 1st - November 30th. We kindly ask that everyone respect this closure.\n" +
-          "If you have any questions regarding the closure, please feel free to reach out to us."
-        );
-      } else if ((month === 12 || month < 2) || (month === 2 && day <= 14)) {
-        return "The Forster area is open.";
-      }
+const getBannerAndCatamountText = () => {
+  const bannerText = (() => {
+    // June 1 – Nov 30 closure
+    if ((month === 5 && day >= 1) || (month === 10 && day <= 30) || (month > 5 && month < 10)) {
+      return (
+        "Please be aware that the Forster area is closed to motorized vehicles from June 1st - November 30th. " +
+        "We kindly ask that everyone respect this closure.\n" +
+        "If you have any questions regarding the closure, please feel free to reach out to us."
+      );
+    } 
+    // Dec 1 – Feb 14 open
+    else if ((month === 11 || month === 0) || (month === 1 && day <= 14)) {
+      return "The Forster area is open.";
+    }
       return "";
     })();
 
     const catamountText = (() => {
-      if ((month === 12 || month < 2) || (month === 2 && day <= 14)) {
+      // Feb 15 – May 31 open for Catamount
+      if ((month === 11 || month === 0) || (month === 1 && day <= 14)) {
         return "Catamount Glacier will be open to snowmobiling February 15 to May 31.";
-      } else if ((month === 2 && day >= 15) || (month > 2 && month < 6) || (month === 5 && day <= 31)) {
+      } else if ((month === 1 && day >= 15) || (month > 1 && month < 5) || (month === 4 && day <= 31)) {
         return "Forster and Catamount areas are wide open.";
       }
       return "";
@@ -168,9 +176,9 @@ function Home() {
           <div className="sponsor-image">
             <img src={sponsor1} alt="Sponsor 1" />
           </div>
-          <div className="sponsor-image">
+          {/* <div className="sponsor-image">
             <img src={sponsor2} alt="Sponsor 2" />
-          </div>
+          </div> */}
           <div className="sponsor-image">
             <img src={sponsor3} alt="Sponsor 3" />
           </div>
@@ -180,8 +188,14 @@ function Home() {
           <div className="sponsor-image">
             <img src={sponsor5} alt="Sponsor 5" />
           </div>
+          <div className="sponsor-image">
+          </div>
         </div>
       </div>
+      {/* <div className="sponsor-images">
+        <img src={sponsor6} alt="Sponsors" className="sponsors-image" />
+      </div> */}
+            {/* <Sponsors2025 className="my-svg" /> */}
 
       {/* Other sections... */}
     </section>
