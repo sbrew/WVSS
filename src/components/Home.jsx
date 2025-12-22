@@ -3,7 +3,7 @@ import './Home.css';
 import Slider from 'react-slick';  // Import React Slick
 import bcsfLogo from '../assets/BCSFLogo.png';
 import bcsfLogo2 from '../assets/BCSFLogo2.jpg';
-import rafflepic2425 from '../assets/rafflepic2425.webp';
+import rafflepic2425 from '../assets/rafflepic2425.jpeg';
 import sponsor1 from '../assets/Alpine_Building_Operations.png';
 import sponsor2 from '../assets/Amped_Up.png';
 import sponsor3 from '../assets/Asia_Nova_Lounge.png';
@@ -141,10 +141,13 @@ function Home() {
 
 
       {/* Updated Raffle Section */}
-      {/* <div className="home-Raffle-section">
-        <h2 className="section-header">2024/2025 W.V.S.S. Poker Run Prize Raffle</h2>
+      <div className="home-Raffle-section">
+        <h2 className="section-header">2025/2026 Windermere Valley Snowmobile Society 50/50</h2>
+        <div className="column-right">
+          <img src={rafflepic2425} alt="Raffle Prizes" />
+        </div>
         <div className="two-column">
-          <div className="column-left">
+          {/* <div className="column-left">
             <h5 className="prize-header">FIRST PRIZE</h5>
             <p>
               Klim Aspect 16 Avalanche airbag pak with Alpride E2 air bag system
@@ -161,15 +164,12 @@ function Home() {
             <p>
               $500 value of local restaurant gift certificates
             </p>
-          </div>
-          <div className="column-right">
-            <img src={rafflepic2425} alt="Raffle Prizes" />
-          </div>
+          </div> */}
         </div>
-        <h3 className="section-subheader">Tickets on sale until March 1st</h3>
+        <h3 className="section-subheader">Tickets on sale until January 10</h3>
         <div className="section-button">
           <a
-            href="https://www.rafflebox.ca/raffle/wvss"
+            href="https://www.rafflebox.ca/raffle/wvs"
             target="_blank"
             rel="noopener noreferrer"
             className="explore-button"
@@ -177,7 +177,7 @@ function Home() {
             Enter Here!
           </a>
         </div>
-      </div> */}
+      </div>
 
       <section>
         {/* Sponsors Section with Images in a Row */}
