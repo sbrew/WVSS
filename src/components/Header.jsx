@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom'; // Use NavLink for active styling
+import { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import './Header.css';
 
 import logo from '../assets/wvss-logo-colour.jpg';
@@ -68,39 +68,28 @@ function Header() {
     return (
       <ul className="nav-list">
         <li className="nav-item">
-          <NavLink 
-            to="/WVSS/" 
-            className="nav-link" 
-            activeClassName="active" 
+          <NavLink
+            to="/WVSS/"
+            className="nav-link"
+            activeClassName="active"
             onClick={handleLinkClick}  // Scroll to top when clicked
           >
             Home
           </NavLink>
         </li>
         <li className="nav-item">
-          <a 
-            href="https://app.amilia.com/store/en/windermere-valley-snowmobile-club/shop/programs/91912" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            href="https://app.amilia.com/store/en/windermere-valley-snowmobile-club/shop/programs/91912"
+            target="_blank"
+            rel="noopener noreferrer"
             className="nav-link"
             onClick={handleLinkClick}  // Scroll to top when clicked
           >
             {`${getMembershipYears()} Membership`}
           </a>
         </li>
-        <li className="nav-item">
-          <a 
-            href="https://app.amilia.com/store/en/windermere-valley-snowmobile-club/shop/programs/calendar/91913?view=month&scrollToCalendar=true" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="nav-link"
-            onClick={handleLinkClick}  // Scroll to top when clicked
-          >
-            Trail Passes
-          </a>
-        </li>
-        <li 
-          className={`nav-item ${isMobile && openDropdownIndex === 0 ? 'club-open' : ''}`} 
+        <li
+          className={`nav-item ${isMobile && openDropdownIndex === 0 ? 'club-open' : ''}`}
           onClick={() => toggleDropdown(0)} // Use click for mobile dropdown
         >
           <span className="nav-link">Club</span>
@@ -112,14 +101,11 @@ function Header() {
               <li>
                 <NavLink to="/volunteer" onClick={handleLinkClick}>Volunteer</NavLink>
               </li>
-              <li>
-                <NavLink to="/contact" onClick={handleLinkClick}>Contact Us</NavLink>
-              </li>
             </ul>
           )}
         </li>
-        <li 
-          className={`nav-item ${isMobile && openDropdownIndex === 1 ? 'conditions-open' : ''}`} 
+        <li
+          className={`nav-item ${isMobile && openDropdownIndex === 1 ? 'conditions-open' : ''}`}
           onClick={() => toggleDropdown(1)} // Use click for mobile dropdown
         >
           <span className="nav-link">Conditions</span>
@@ -131,16 +117,26 @@ function Header() {
             </ul>
           )}
         </li>
-        <li 
-          className={`nav-item ${isMobile && openDropdownIndex === 2 ? 'riding-areas-open' : ''}`} 
+        <li
+          className={`nav-item ${isMobile && openDropdownIndex === 2 ? 'riding-areas-open' : ''}`}
         >
-          <NavLink 
-            to="/riding-areas" 
-            className="nav-link" 
-            activeClassName="active" 
+          <NavLink
+            to="/riding-areas"
+            className="nav-link"
+            activeClassName="active"
             onClick={handleLinkClick}  // Scroll to top when clicked
           >
             Riding Areas
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            to="/contact"
+            className="nav-link"
+            activeClassName="active"
+            onClick={handleLinkClick}  // Scroll to top when clicked
+          >
+            Contact Us
           </NavLink>
         </li>
       </ul>
