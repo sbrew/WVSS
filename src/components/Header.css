@@ -227,7 +227,7 @@
   }
 
   .nav-item.club-open {
-    margin-bottom: 180px; /* Adjust space when the club dropdown is open */
+    margin-bottom: 100px; /* Adjust space when the club dropdown is open */
   }
 
   .nav-item.conditions-open {
