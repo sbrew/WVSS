@@ -4,14 +4,25 @@ import Slider from 'react-slick';  // Import React Slick
 import bcsfLogo from '../assets/BCSFLogo.png';
 import bcsfLogo2 from '../assets/BCSFLogo2.jpg';
 import rafflepic2425 from '../assets/rafflepic2425.webp';
-import sponsor1 from '../assets/kanataMod.jpg';
-// import sponsor2 from '../assets/horsethiefcreek-textbordered-colour.png';
-import sponsor3 from '../assets/cvflogoleftb2bb.jpg';
-import sponsor4 from '../assets/CVPowerSports.png';
-import sponsor5 from '../assets/cbt-logo.jpg';
-import sponsor6 from '../assets/groupedSponsors.jpg';
-// import { ReactComponent as Sponsors2025 } from '../assets/2025Sponsors.svg';
-
+import sponsor1 from '../assets/Alpine_Building_Operations.png';
+import sponsor2 from '../assets/Amped_Up.png';
+import sponsor3 from '../assets/Asia_Nova_Lounge.png';
+import sponsor4 from '../assets/Be_Seen_Street_Team.png';
+import sponsor5 from '../assets/Beyond_BNB.png';
+import sponsor6 from '../assets/Brockmeyer_Landscaping.png';
+import sponsor7 from '../assets/Conrads.png';
+import sponsor8 from '../assets/CV_Freight.png';
+import sponsor9 from '../assets/Dave_McGrath.png';
+import sponsor10 from '../assets/Horsethief_Creek_Pub.png';
+import sponsor11 from '../assets/Ion_Suspension.png';
+import sponsor12 from '../assets/Kool_Country_Towing.png';
+import sponsor13 from '../assets/LandQuest.png';
+import sponsor14 from '../assets/Palliser_Printing.png';
+import sponsor15 from '../assets/Peaks_Storage.png';
+import sponsor16 from '../assets/Rona.png';
+import sponsor17 from '../assets/Superstarr_Cleaning.png';
+import sponsor18 from '../assets/Syndicate.png';
+import sponsor19 from '../assets/Total_Care.png';
 
 function Home() {
   const today = new Date();
@@ -19,20 +30,20 @@ function Home() {
   const day = today.getDate();
   const [facebookPost, setFacebookPost] = useState(null);
 
-const getBannerAndCatamountText = () => {
-  const bannerText = (() => {
-    // June 1 – Nov 30 closure
-    if ((month === 5 && day >= 1) || (month === 10 && day <= 30) || (month > 5 && month < 10)) {
-      return (
-        "Please be aware that the Forster area is closed to motorized vehicles from June 1st - November 30th. " +
-        "We kindly ask that everyone respect this closure.\n" +
-        "If you have any questions regarding the closure, please feel free to reach out to us."
-      );
-    } 
-    // Dec 1 – Feb 14 open
-    else if ((month === 11 || month === 0) || (month === 1 && day <= 14)) {
-      return "The Forster area is open.";
-    }
+  const getBannerAndCatamountText = () => {
+    const bannerText = (() => {
+      // June 1 – Nov 30 closure
+      if ((month === 5 && day >= 1) || (month === 10 && day <= 30) || (month > 5 && month < 10)) {
+        return (
+          "Please be aware that the Forster area is closed to motorized vehicles from June 1st - November 30th. " +
+          "We kindly ask that everyone respect this closure.\n" +
+          "If you have any questions regarding the closure, please feel free to reach out to us."
+        );
+      }
+      // Dec 1 – Feb 14 open
+      else if ((month === 11 || month === 0) || (month === 1 && day <= 14)) {
+        return "The Forster area is open.";
+      }
       return "";
     })();
 
@@ -169,36 +180,70 @@ const getBannerAndCatamountText = () => {
       </div> */}
 
       <section>
-      {/* Sponsors Section with Images in a Row */}
-      <div className="sponsors-banner">
-        <h2 className="section-header">Our Sponsors</h2>
-        <div className="sponsor-images">
-          <div className="sponsor-image">
-            <img src={sponsor1} alt="Sponsor 1" />
-          </div>
-          {/* <div className="sponsor-image">
-            <img src={sponsor2} alt="Sponsor 2" />
-          </div> */}
-          <div className="sponsor-image">
-            <img src={sponsor3} alt="Sponsor 3" />
-          </div>
-          <div className="sponsor-image">
-            <img src={sponsor4} alt="Sponsor 4" />
-          </div>
-          <div className="sponsor-image">
-            <img src={sponsor5} alt="Sponsor 5" />
-          </div>
-          <div className="sponsor-image">
+        {/* Sponsors Section with Images in a Row */}
+        <div className="sponsors-banner">
+          <h2 className="section-header">Our Sponsors</h2>
+          <div className="sponsor-images">
+            <div className="sponsor-image">
+              <img src={sponsor1} alt="Sponsor 1" />
+            </div>
+            <div className="sponsor-image">
+              <img src={sponsor2} alt="Sponsor 2" />
+            </div>
+            <div className="sponsor-image">
+              <img src={sponsor3} alt="Sponsor 3" />
+            </div>
+            <div className="sponsor-image">
+              <img src={sponsor4} alt="Sponsor 4" />
+            </div>
+            <div className="sponsor-image">
+              <img src={sponsor5} alt="Sponsor 5" />
+            </div>
+            <div className="sponsor-image">
+              <img src={sponsor6} alt="Sponsor 6" />
+            </div>
+            <div className="sponsor-image">
+              <img src={sponsor7} alt="Sponsor 7" />
+            </div>
+            <div className="sponsor-image">
+              <img src={sponsor8} alt="Sponsor 8" />
+            </div>
+            <div className="sponsor-image">
+              <img src={sponsor9} alt="Sponsor 9" />
+            </div>
+            <div className="sponsor-image">
+              <img src={sponsor10} alt="Sponsor 10" />
+            </div>
+            <div className="sponsor-image">
+              <img src={sponsor11} alt="Sponsor 11" />
+            </div>
+            <div className="sponsor-image">
+              <img src={sponsor12} alt="Sponsor 12" />
+            </div>
+            <div className="sponsor-image">
+              <img src={sponsor13} alt="Sponsor 13" />
+            </div>
+            <div className="sponsor-image">
+              <img src={sponsor14} alt="Sponsor 14" />
+            </div>
+            <div className="sponsor-image">
+              <img src={sponsor15} alt="Sponsor 15" />
+            </div>
+            <div className="sponsor-image">
+              <img src={sponsor16} alt="Sponsor 16" />
+            </div>
+            <div className="sponsor-image">
+              <img src={sponsor17} alt="Sponsor 17" />
+            </div>
+            <div className="sponsor-image">
+              <img src={sponsor18} alt="Sponsor 18" />
+            </div>
+            <div className="sponsor-image">
+              <img src={sponsor19} alt="Sponsor 19" />
+            </div>
           </div>
         </div>
-      </div>
-      {/* <div className="sponsor-images">
-        <img src={sponsor6} alt="Sponsors" className="sponsors-image" />
-      </div> */}
-            {/* <Sponsors2025 className="my-svg" /> */}
-
-      {/* Other sections... */}
-    </section>
+      </section>
 
       <div className="home-proud-member" style={{ paddingBottom: '10px' }}>
         <p>Proud Member</p>

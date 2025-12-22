@@ -113,9 +113,6 @@ function Header() {
                 <NavLink to="/volunteer" onClick={handleLinkClick}>Volunteer</NavLink>
               </li>
               <li>
-                <NavLink to="/sponsors" onClick={handleLinkClick}>Sponsors</NavLink>
-              </li>
-              <li>
                 <NavLink to="/contact" onClick={handleLinkClick}>Contact Us</NavLink>
               </li>
             </ul>

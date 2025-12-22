@@ -203,7 +203,7 @@
 
 /* Individual sponsor image styles */
 .sponsor-image img {
-  height: 100px; /* Set the height for images */
+  height: 150px; /* Set the height for images */
   width: auto; /* Keep the aspect ratio intact */
   object-fit: contain; /* Ensure images fit well */
   border-radius: 8px; /* Optional: Add rounded corners */

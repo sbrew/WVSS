@@ -8,7 +8,6 @@ import Hero from './components/Hero'
 import About from './components/About'
 // import Donate from './components/Donate';
 import Volunteer from './components/Volunteer';
-import Sponsors from './components/Sponsors';
 import Contact from './components/Contact';
 import Footer from './components/Footer'
 import TrailsPage from './components/TrailsPage'
@@ -23,7 +22,6 @@ function App() {
           <Route path="/about" element={<About />} />
           {/* <Route path="/donate" element={<Donate />} /> */}
           <Route path="/volunteer" element={<Volunteer />} />
-          <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/riding-areas" element={<TrailsPage />} />
         </Routes>
