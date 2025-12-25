@@ -26,9 +26,13 @@ function Contact() {
               <ul>
                 <li><strong>President:</strong> Darcy Lehr</li>
                 <li><strong>Vice President:</strong> Mike Walsh</li>
-                <li><strong>Director:</strong> JoAnne McLennan</li>
-                <li><strong>Director:</strong> Jye Carter</li>
-                <li><strong>Director:</strong> Jon Welsh</li>
+                <li><strong>Director:</strong> Aaron Nickerson</li>
+                <li><strong>Director:</strong> Jye Carder</li>
+                <li><strong>Sponsorship:</strong> Mark Starr</li>
+                <li><strong>Treasurer:</strong> Rob Mcsheffrey</li>
+                <li><strong>Social Media:</strong> AJ Magrath</li>
+                <li><strong>Grooming:</strong> Rich Martin</li>
+                <li><strong>Grooming:</strong> Garret Brockmeyer</li>
               </ul>
             </div>
         </section>
