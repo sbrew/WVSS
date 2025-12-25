@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './ContactForm.css';
 
-function ContactForm() {
+function ContactForm(props) {
   const formRef = useRef();
   const [status, setStatus] = useState('');
 
@@ -12,7 +12,7 @@ function ContactForm() {
 
     emailjs.sendForm(
       'service_3ucrobc',       // Service ID
-      'template_2xp111l',   // Template ID
+      props.templateId,   // Template ID
       formRef.current,
       'IcPZ0w7yKp-KTDpQX'           // Public Key
     )

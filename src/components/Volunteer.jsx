@@ -4,11 +4,6 @@ import ContactForm from './ContactForm'; // Import the reusable form component
 import './Volunteer.css';
 
 function Volunteer() {
-  const handleVolunteerSubmit = (formData) => {
-    // Handle form submission (e.g., log the data, send to backend, etc.)
-    console.log('Volunteer Form Submitted:', formData);
-  };
-
   return (
     <div>
       <PageHeader title="Volunteer" />
@@ -43,7 +38,9 @@ function Volunteer() {
 
         <div className="volunteer-form-container">
           <h3>Become a Volunteer</h3>
-          <ContactForm onSubmit={handleVolunteerSubmit} /> {/* Use the ContactForm component */}
+          <ContactForm
+            templateId={'template_wt3zj4f'}
+          />
         </div>
       </section>
     </div>

@@ -4,11 +4,6 @@ import ContactForm from './ContactForm'; // Import the ContactForm component
 import './Contact.css';
 
 function Contact() {
-  const handleContactSubmit = (formData) => {
-    // Handle form submission for Contact Us page
-    console.log('Contact Form Submitted:', formData);
-  };
-
   return (
     <div>
       <PageHeader title="Contact Us" />
@@ -37,7 +32,9 @@ function Contact() {
             </div>
         </section>
         <h1>Send us an email</h1>
-        <ContactForm onSubmit={handleContactSubmit} /> {/* Use the same form here */}
+        <ContactForm
+          templateId={'template_2xp111l'}
+        />
       </div>
     </div>
   );
