@@ -32,6 +32,7 @@ function ContactForm() {
       <input type="text" name="name" required />
       <label htmlFor="email">Email</label>
       <input type="email" name="email" required />
+      <label htmlFor="message">Questions or Comments</label>
       <textarea
         id="message"
         name="message"
