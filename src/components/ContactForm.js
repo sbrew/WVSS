@@ -1,59 +1,50 @@
-import React, { useState } from 'react';
-import './ContactForm.css'; // Optional: You can create a separate CSS file for the form styles
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import './ContactForm.css';
 
-function ContactForm({ onSubmit }) {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    comments: '',
-  });
+function ContactForm() {
+  const formRef = useRef();
+  const [status, setStatus] = useState('');
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    onSubmit(formData); // Pass the form data to the parent component when submitted
-    setFormData({ name: '', email: '', comments: '' }); // Clear the form
-  };
+    setStatus('sending');
 
+    emailjs.sendForm(
+      'service_3ucrobc',       // Service ID
+      'template_2xp111l',   // Template ID
+      formRef.current,
+      'IcPZ0w7yKp-KTDpQX'           // Public Key
+    )
+    .then(() => {
+      setStatus('success');
+      formRef.current.reset();
+    })
+    .catch(() => {
+      setStatus('error');
+    });
+  }
+
+ 
   return (
-    <form className="contact-form" onSubmit={handleSubmit}>
+    <form ref={formRef} onSubmit={sendEmail} className="contact-form">
       <label htmlFor="name">Name</label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
-        required
-      />
-
+      <input type="text" name="name" required />
       <label htmlFor="email">Email</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-        required
-      />
-
-      <label htmlFor="comments">Questions or Comments</label>
+      <input type="email" name="email" required />
       <textarea
-        id="comments"
-        name="comments"
+        id="message"
+        name="message"
         rows="4"
-        value={formData.comments}
-        onChange={handleChange}
+        required
       ></textarea>
 
-      <button type="submit" className="submit-button">Submit</button>
+      <button type="submit" className="submit-button">
+        {status === 'sending' ? 'Sending…' : 'Send Message'}
+      </button>
+
+      {status === 'success' && <p>Message sent successfully!</p>}
+      {status === 'error' && <p>Something went wrong. Please try again.</p>}
     </form>
   );
 }
