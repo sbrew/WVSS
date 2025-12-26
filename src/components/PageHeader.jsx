@@ -1,17 +1,9 @@
-import React from 'react'
+import tablet from '../assets/snowmobiling-forester-pow.jpg';
+import desktop from '../assets/snowmobiling-forester-pow-carve-1-banner-1024x342.jpg';
+import mobile from '../assets/snowmobiling-forester-pow-carve-1-banner-736x246.jpg';
 import './PageHeader.css'
 
-const PageHeader = ({ title, subtitle, backgroundImages }) => {
-  // Default images for responsive sizes (can be overridden by props)
-  const defaultImages = {
-    desktop: 'https://wvss.ca/wp-content/uploads/2020/12/snowmobiling-forester-pow-carve-1-banner.jpg',
-    tablet: 'https://wvss.ca/wp-content/uploads/2020/12/snowmobiling-forester-pow-carve-1-banner-1024x342.jpg',
-    mobile: 'https://wvss.ca/wp-content/uploads/2020/12/snowmobiling-forester-pow-carve-1-banner-736x246.jpg',
-  }
-
-  // Merge default images with provided images (if any)
-  const images = { ...defaultImages, ...backgroundImages }
-
+const PageHeader = ({ title, subtitle }) => {
   return (
     <div className="page-header">
       <div className="header-content">
@@ -21,16 +13,16 @@ const PageHeader = ({ title, subtitle, backgroundImages }) => {
       <style>
         {`
           .page-header {
-            background-image: url(${images.desktop})
+            background-image: url(${desktop})
           }
           @media (max-width: 1024px) {
             .page-header {
-              background-image: url(${images.tablet})
+              background-image: url(${tablet})
             }
           }
           @media (max-width: 768px) {
             .page-header {
-              background-image: url(${images.mobile})
+              background-image: url(${mobile})
             }
           }
         `}
