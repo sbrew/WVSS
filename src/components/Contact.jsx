@@ -24,7 +24,7 @@ function Contact() {
                 <li><strong>Director:</strong> Aaron Nickerson</li>
                 <li><strong>Director:</strong> Jye Carder</li>
                 <li><strong>Sponsorship:</strong> Mark Starr</li>
-                <li><strong>Treasurer:</strong> Rob Mcsheffrey</li>
+                <li><strong>Treasurer:</strong> Rob McSheffrey</li>
                 <li><strong>Social Media:</strong> AJ Magrath</li>
                 <li><strong>Grooming:</strong> Rich Martin</li>
                 <li><strong>Grooming:</strong> Garret Brockmeyer</li>
