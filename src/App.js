@@ -18,7 +18,7 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/WVSS/" element={<><Hero /><Home /></>} />
+          <Route path="" element={<><Hero /><Home /></>} />
           <Route path="/about" element={<About />} />
           {/* <Route path="/donate" element={<Donate />} /> */}
           <Route path="/volunteer" element={<Volunteer />} />

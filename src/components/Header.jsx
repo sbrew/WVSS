@@ -69,7 +69,7 @@ function Header() {
       <ul className="nav-list">
         <li className="nav-item">
           <NavLink
-            to="/WVSS/"
+            to=""
             className="nav-link"
             activeClassName="active"
             onClick={handleLinkClick}  // Scroll to top when clicked
