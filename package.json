@@ -2,7 +2,7 @@
   "name": "wvss-snowmobile",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://sbrew.github.io/WVSS/",
+  "homepage": "https://wvss.ca",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
